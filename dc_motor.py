@@ -2,8 +2,8 @@ from gpiozero import Motor
 from time import sleep
 
 # Definition of motor pin
-FW = 7
-BW = 9
+FW = 20
+BW = 21
 
 # Set pin
 motor = Motor(forward=FW, backward=BW)
@@ -11,12 +11,12 @@ motor = Motor(forward=FW, backward=BW)
 
 # forward
 def forward(delay):
-    motor.forward(speed=0.5)
+    motor.forward()
     sleep(delay)
 
 
 def back(delay):
-    motor.backward(speed=0.5)
+    motor.backward()
     sleep(delay)
 
 
@@ -24,6 +24,7 @@ def back(delay):
 try:
     while True:
         forward(1)
+        back(1)
 
 except KeyboardInterrupt:
     print("keyboard interrupt")
