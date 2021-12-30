@@ -2,8 +2,8 @@ from gpiozero import Motor
 from time import sleep
 
 # Definition of motor pin
-FW = 20
-BW = 21
+FW = 22
+BW = 27
 
 # Set pin
 motor = Motor(forward=FW, backward=BW)
